@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Game App</string>
+    <string-array name="Games">
+        <item>fallout</item>
+        <item>borderlands 2</item>
+        <item>grand theft auto v</item>
+        <item>payday 2</item>
+        <item>battlefield</item>
+        <item>life is strange episode</item>
+    </string-array>
+</resources>
