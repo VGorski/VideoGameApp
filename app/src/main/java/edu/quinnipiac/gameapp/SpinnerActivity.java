@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.SearchView;
 import androidx.appcompat.widget.ShareActionProvider;
 import android.widget.Spinner;
@@ -35,6 +36,7 @@ public class SpinnerActivity extends AppCompatActivity {
     //String gameResultsJSONString = null;
     ResultsHandler resultsHandler = new ResultsHandler();
     boolean userSelect = false;
+
 
     private String info = "https://rawg-video-games-database.p.rapidapi.com/games/";
     private String names = "https://rawg-video-games-database.p.rapidapi.com/games";
@@ -83,6 +85,8 @@ public class SpinnerActivity extends AppCompatActivity {
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+
        // setSupportActionBar(toolbar);
         try {
             ArrayAdapter<String> resultsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Collections.singletonList(resultsHandler.getGameName((String)spinner.getSelectedItem())));
@@ -106,9 +110,10 @@ public class SpinnerActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
+
+
     }
     @Override
     public void onUserInteraction(){
@@ -116,9 +121,6 @@ public class SpinnerActivity extends AppCompatActivity {
         userSelect = true;
     }
 
-    public void search(View view) {
-        // Look things up and display the results
-    }
 
 
     private class FetchResults extends AsyncTask<String,Void,String[]>{
@@ -127,7 +129,7 @@ public class SpinnerActivity extends AppCompatActivity {
         protected String[] doInBackground(String... params) {
             HttpURLConnection urlConnection =null;
             BufferedReader reader =null;
-            String[] results = null;
+            String[] results;
             try {
 
 
@@ -179,9 +181,6 @@ public class SpinnerActivity extends AppCompatActivity {
                 intent.putExtra("name",result[0]);
                 intent.putExtra("description", result[1]);
                 intent.putExtra("released",result[2]);
-
-
-
                 startActivity(intent);
 
             }
@@ -210,5 +209,9 @@ public class SpinnerActivity extends AppCompatActivity {
             return resultsData;
 
         }
+
+
     }
+
+
 }
