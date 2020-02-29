@@ -204,7 +204,7 @@ public class SpinnerActivity extends AppCompatActivity {
             }
             String[] resultsData = {"","",""};
             resultsData[0] = resultsHandler.getGameName(buffer.toString());
-            resultsData[1] = resultsHandler.getGameDescription(buffer.toString());
+           // resultsData[1] = resultsHandler.getGameDescription(buffer.toString());
             resultsData[2] = resultsHandler.getGameRelease(buffer.toString());
             return resultsData;
 

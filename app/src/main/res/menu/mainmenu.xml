@@ -14,7 +14,6 @@
         android:icon="@drawable/ic_action_settings"
         app:showAsAction="never" >
     </item>
-    <!-- it is not necessary to declare an icon for the widget, since ShareActionProvider provides its own graphics-->
 
     <item android:id="@+id/action_search"
         android:title="Search"

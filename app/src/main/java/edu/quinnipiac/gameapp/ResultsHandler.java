@@ -29,8 +29,8 @@ public class ResultsHandler {
         return gameJSONObject.getString("description");
     }
     public String getGameRelease(String gameRelease) throws JSONException {
-        JSONObject gameDescriptionJSONObject = new JSONObject(gameRelease);
-        JSONObject gameJSONObject = gameDescriptionJSONObject.getJSONArray("results").getJSONObject(0);
+        JSONObject gameReleaseJSONObject = new JSONObject(gameRelease);
+        JSONObject gameJSONObject = gameReleaseJSONObject.getJSONArray("results").getJSONObject(0);
         return gameJSONObject.getString("released");
     }
 
