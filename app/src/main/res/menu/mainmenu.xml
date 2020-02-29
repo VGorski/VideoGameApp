@@ -13,6 +13,15 @@
         android:title="Settings"
         android:icon="@drawable/ic_action_settings"
         app:showAsAction="never" >
+
+        <menu>
+            <item android:id = "@+id/background_1"
+            android:title = "Background 1" />
+            <item android:id = "@+id/background_2"
+                android:title = "Background 2" />
+            <item android:id = "@+id/background_3"
+                android:title = "Background 3" />
+        </menu>
     </item>
 
     <item android:id="@+id/action_search"

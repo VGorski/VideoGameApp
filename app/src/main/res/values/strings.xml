@@ -8,4 +8,5 @@
         <item>battlefield</item>
         <item>life is strange episode</item>
     </string-array>
+    <string name = "release">Release Date</string>
 </resources>

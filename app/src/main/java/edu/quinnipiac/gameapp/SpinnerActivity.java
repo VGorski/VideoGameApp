@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import androidx.appcompat.widget.ShareActionProvider;
 import android.widget.Spinner;
@@ -36,6 +37,7 @@ public class SpinnerActivity extends AppCompatActivity {
     //String gameResultsJSONString = null;
     ResultsHandler resultsHandler = new ResultsHandler();
     boolean userSelect = false;
+    RelativeLayout layout;
 
 
     private String info = "https://rawg-video-games-database.p.rapidapi.com/games/";
@@ -51,7 +53,8 @@ public class SpinnerActivity extends AppCompatActivity {
         SearchView searchView = (SearchView) searchItem.getActionView();
         MenuItem shareItem = menu.findItem(R.id.action_share);
         provider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
-                //getActionProvider(shareItem);
+        layout = findViewById(R.id.spinnerActivity);
+        //getActionProvider(shareItem);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -71,6 +74,15 @@ public class SpinnerActivity extends AppCompatActivity {
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_TEXT, "This is a message for you");
                 provider.setShareIntent(intent);
+                return true;
+            case R.id.background_1:
+                layout.setBackgroundResource(R.drawable.background1);
+                return true;
+            case R.id.background_2:
+                layout.setBackgroundResource(R.drawable.background2);
+                return true;
+            case R.id.background_3:
+                layout.setBackgroundResource(R.drawable.background3);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
