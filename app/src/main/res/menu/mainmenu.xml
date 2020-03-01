@@ -2,12 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:id="@+id/action_fav"
-        android:title="Favorite"
-        android:icon="@drawable/ic_action_fav"
-        app:showAsAction="ifRoom" >
-    </item>
+    <item android:id="@+id/action_help"
+        android:title="Help"
+        app:showAsAction="never" />
+
     <item
         android:id="@+id/action_settings"
         android:title="Settings"
@@ -15,25 +13,20 @@
         app:showAsAction="never" >
 
         <menu>
-            <item android:id = "@+id/background_1"
-            android:title = "Background 1" />
-            <item android:id = "@+id/background_2"
-                android:title = "Background 2" />
-            <item android:id = "@+id/background_3"
-                android:title = "Background 3" />
+            <item android:id = "@+id/awesomeBackground"
+            android:title = "Awesome Background" />
+            <item android:id = "@+id/coolBackground"
+                android:title = "Cool Background" />
+            <item android:id = "@+id/cuteBackground"
+                android:title = "Cute Background" />
         </menu>
     </item>
 
-    <item android:id="@+id/action_search"
-        android:title="Search"
-        android:icon="@drawable/ic_action_search"
-        app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="android.widget.SearchView"
-        />
-
     <item android:id="@+id/action_share"
         android:title="Share"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"
         />
+
+
 </menu>

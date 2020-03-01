@@ -1,38 +1,36 @@
 package edu.quinnipiac.gameapp;
-import org.json.JSONArray;
+
+/*
+@authors: Victoria Gorski and Julia Wilkinson
+@date: 2 - 29 - 20
+@description: The ResultsHandler class is used to get the data from the API and return it to the ResultsActivity class.
+ */
+
+// Imports
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
-
+// Constructor
 public class ResultsHandler {
-    //public static final String GAME_RESULTS = "Game_Results";
-    //We can change this later.....
-    //final public static String[] games = {"fallout","borderlands 2","grand theft auto v","payday 2","battlefield","life is strange episode"};
 
+    // Required constructor
     public ResultsHandler(){
-
 
     }
 
-
+    // Get the name of the game
     public String getGameName(String gameName) throws JSONException {
         JSONObject gameNameJSONObject = new JSONObject(gameName);
+        // Get the name from the array in the API and return it as a string
         JSONObject gameJSONObject = gameNameJSONObject.getJSONArray("results").getJSONObject(0);
         return gameJSONObject.getString("name");
     }
 
-
-    public String getGameDescription(String gameDescription) throws JSONException {
-        JSONObject gameDescriptionJSONObject = new JSONObject(gameDescription);
-        JSONObject gameJSONObject = gameDescriptionJSONObject.getJSONArray("results").getJSONObject(0);
-        return gameJSONObject.getString("description");
-    }
+    // Get the release date of the game
     public String getGameRelease(String gameRelease) throws JSONException {
         JSONObject gameReleaseJSONObject = new JSONObject(gameRelease);
+        // Get the release date from the array in the API and return it as a string
         JSONObject gameJSONObject = gameReleaseJSONObject.getJSONArray("results").getJSONObject(0);
         return gameJSONObject.getString("released");
     }
-
-
 }

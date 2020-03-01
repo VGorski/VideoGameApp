@@ -8,48 +8,31 @@
     tools:context=".ResultsActivity"
     android:background="@drawable/background1">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Results"
-        android:layout_below="@id/toolbar"
         android:layout_centerHorizontal="true"
+        android:text="Results"
         android:textSize="40dp"
-        android:textStyle="bold"
-        />
+        android:textColor="#000000"
+        app:fontFamily="@font/abril_fatface"/>
+
     <EditText
         android:id="@+id/gameName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="Name"
-        />
-    <EditText
-        android:id="@+id/gameDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/gameName"
-        android:text="Description"
-        />
+        android:layout_width="260dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:hint="@string/name"
+        app:fontFamily="@font/abril_fatface" />
 
     <EditText
         android:id="@+id/gameRelease"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/gameDescription"
+        android:layout_width="260dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/gameName"
         android:layout_centerInParent="true"
-        android:hint="@string/release" />
+        android:hint="@string/release"
+        app:fontFamily="@font/abril_fatface" />
 
 
 </RelativeLayout>

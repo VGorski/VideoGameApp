@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".OpeningActivity"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@drawable/background1"
@@ -14,22 +14,23 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_height="70dp"
         android:layout_gravity="center"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
+        android:gravity="center"
         android:text="Welcome to Game Information!"
-        android:textSize="24sp"
-        app:fontFamily="monospace"
-        android:textStyle="bold"
-        />
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:fontFamily="@font/abril_fatface" />
+
+    <ImageView
+        android:id="@+id/startImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:layout_height="300dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/videogamelibrary" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
